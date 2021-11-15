@@ -16,13 +16,16 @@ app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs'}))
 app.set('view engine', 'hbs')
 
 app.use(bodyParser.urlencoded({ extended: true}))
-app.use(methodOverride('_method'))
 
 // route setting
 app.get('/', (req, res) => {
 	res.render('index')
 })
-
-//
+app.post('/result', (req,res) =>{
+	const loginFailed = 'Username或Password錯誤'
+	Userauthentication.findOne({email:req.body.username, password:req.body.password})
+	.then(data => data ? res.render('result', {username:data.firstName}): res.render('index',{loginFailed}))
+	.catch(error => console.log(error))
+})
 
 app.listen(port, () => console.log(`App is running on http://localhost:${port}`))
