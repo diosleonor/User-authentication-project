@@ -3,7 +3,7 @@
 運用Node.js搭配Express框架及express-handlebars搭建的簡易式「使用者認證登入頁面」。
 
 <h3>功能描述 (features)：</h3>
-    <h4>使用者可輸入帳密後按送出</h4>
+    <h4>使用者可輸入帳密後按登入</h4>
        <p><img src="./pics/A10-使用者驗證-首頁.png" alt="index"/></p>
     <h4>成功會跳轉登入成功頁面</h4>
        <p><img src="./pics/A10-使用者驗證-成功.png" alt="loginsuccess"/></p>
@@ -24,12 +24,15 @@
   3. 安裝Node套件管理器(npm)
   <pre><code>npm install</code></pre>
   
-  4. 用npm啟動伺服器
+  4. 用npm安裝種子資料
+  <pre><code>npm run seed</code></pre>
+
+  5. 用npm啟動伺服器
   <pre><code>npm run dev</code></pre>
   或是
   <pre><code>npm run start</code></pre>
 
-  5. 開啟網頁瀏覽器並連結到此網址即可開始使用登入頁面囉
+  6. 開啟網頁瀏覽器並連結到此網址即可開始使用登入頁面囉
    <pre><code>http://localhost:3000</code></pre>
   
 <h3>開發工具及版本 (dev tools information)：</h3>
